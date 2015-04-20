@@ -1,0 +1,74 @@
+.quantoCusta {
+	margin-left: 0px !important;
+	width: 230px;
+	border: 1px solid #eee;
+	border-radius: 10px;
+	margin-right: 5px;
+}
+.quantoCusta ul {
+	padding: 0px 10px;
+	margin-top: 20px;
+}
+.quantoCusta ul li {
+	border-bottom: 1px solid #eee;
+	margin: 10px 0px;
+	list-style: none;
+	list-style-image: url(../img/check.png);
+	padding-bottom: 5px;
+}
+.QCtitulo {
+	border-bottom: 1px solid #ddd;
+	font-family: 'PT Sans', Arial, sans-serif;
+	color: #282725;
+	font-size: 25px;
+	padding-left: 18px;
+	background-image: -moz-linear-gradient(top, #FFFFFF 20%, #eee);
+	background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0.2, #FFFFFF), color-stop(1.0, #eee));
+	padding-bottom: 10px;
+	font-weight: normal;
+}
+.QCpreco {
+background-image: -moz-linear-gradient(top, #808080 36%, #696969 95%);
+background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0.36, #808080), color-stop(0.95, #696969));
+	color: #fff;
+	font-size: 18px;
+	text-align: center;
+	line-height: 2.8;
+	margin-top: 15px;
+	
+}
+.QCbutton {
+display: block;
+margin: 15px auto;
+text-align: center;
+width: 120px;
+padding: 5px;
+background: #fff;
+font-weight: bold;
+border: 2px solid;
+}
+#tablePrecos th, #tablePrecos td {
+	text-align:center;
+}
+.desconto {
+	color: rgb(66, 180, 204);
+}
+.imgProf {
+width:30px;margin-bottom: 10px;
+}
+.paragrafoProf {
+	text-align:center;
+}
+.spanProf {
+font-size:25px;
+float: none;
+margin-left: 0px;
+}
+.boxProf {
+color: #fff;
+font-size: 18px;
+text-align: center;
+border: 5px solid #dccc99;
+padding: 15px;
+margin: 50px 110px 0px;
+}
