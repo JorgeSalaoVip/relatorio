@@ -190,3 +190,37 @@ footer a:hover,
 footer a:active {
   color: #fff;
 }
+
+#boxLoadUtilShadow {
+    position: fixed;
+    width: 100%;
+    height: 100%;  
+    left: 0px;
+    top: 0px;
+    opacity: 0.8!important;
+    filter: alpha(opacity=80)!important;
+    z-index: 1041;
+    background-color: #000;
+}
+
+#boxLoadUtil {
+    position: fixed;
+    width: 100%;
+    height: 100%;  
+    left: 0px;
+    top: 0px;
+    z-index: 1050;
+    text-align: center;
+}
+
+#loadUtilCarregando {
+    width: 100%;
+    max-width: 1000px;
+    padding-top: 20%;
+    margin: 6px auto;
+    text-align: center;
+    color: #fff;
+}
+
+
+
