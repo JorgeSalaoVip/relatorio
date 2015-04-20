@@ -41,6 +41,8 @@
 $route['default_controller'] = "relatorios";
 $route['404_override'] = '';
 
+$route['relatorio/gerar'] = "relatorios/gerarRelatorio";
+
 
 /* End of file routes.php */
 /* Location: ./application/config/routes.php */

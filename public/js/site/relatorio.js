@@ -3,8 +3,9 @@ function Relatorio() {
     
     
     
+    
     _self.ajaxExemplo = function(dados) {
-        /*loadUtils.abrir();
+        loadUtils.abrir();
         
         $.ajax({
             type: "POST",
@@ -20,7 +21,7 @@ function Relatorio() {
                     
                 }
             }
-        });*/
+        });
     };
     
     _self.construtor = function() {
