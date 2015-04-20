@@ -6,8 +6,7 @@ class Relatorios extends CI_Controller {
   public function __construct()
 	{
 		parent::__construct();
-		$this->load->model('seo_model');
-	
+		
 		$this->dataHeader =
 		array(
 			'titulo' => 'Relatório para Salão de Beleza - SalãoVIP',
@@ -31,7 +30,7 @@ class Relatorios extends CI_Controller {
             
             $this->load->view('relatorio-salao.php',$data);
 
-            }
+        }
 	
 	public function passo1()
 	{
