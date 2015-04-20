@@ -105,7 +105,7 @@ header {
 .questionario {
   padding: 50px 0;
 }
-.questionario ul {
+.questionario ul.questao {
   border-bottom: 1px dashed #ccc;
   padding: 15px 0 20px 0;
   margin: 0;
@@ -122,6 +122,15 @@ header {
 #q4 li  {
   padding: 4px 0;
 }
+
+#q1 .parsley-errors-list, #q5 .parsley-errors-list {
+    
+}
+
+.erro-manual {
+    display: none;
+}
+
 .questionario li {
   list-style: none;
   padding: 4px 0 4px 20px;

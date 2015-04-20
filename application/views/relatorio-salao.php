@@ -48,70 +48,76 @@
                     </li>
                     <li>
                         <label class="checkbox">
-                          <input type="checkbox" name="e" data-parsley-mincheck="1" />
-                          Preciso de mais clientes especialmente nos horários ociosos.
+                            <input type="checkbox" value="A1" name="a[]" />
+                            Preciso de mais clientes especialmente nos horários ociosos.
                         </label>
                     </li>
                     <li>
                         <label class="checkbox">
-                          <input type="checkbox" name="e" />
-                          Não consigo controlar as finanças e acabo tendo mais gastos do que lucro.
+                            <input type="checkbox" value="A2" name="a[]" />
+                            Não consigo controlar as finanças e acabo tendo mais gastos do que lucro.
                         </label>
                     </li>
                     <li>
                         <label class="checkbox">
-                            <input type="checkbox" name="e" />
+                            <input type="checkbox" value="A3" name="a[]" />
                             Tenho dificuldade de controlar a presença e comissão dos meus funcionários.
                         </label>
                     </li>
                     <li>
                         <label class="checkbox">
-                            <input type="checkbox" name="e" />
+                            <input type="checkbox" value="A4" name="a[]" />
                             Gostaria de fazer mais promoções para meu salão mas tenho dificuldade de divulgar e/ou controlar o andamento das mesmas.
                         </label>
                     </li>
                     <li>
                         <label class="checkbox">
-                            <input type="checkbox" name="e" />
+                            <input type="checkbox" value="A5" name="a[]" />
                             Gostaria de dedicar mais tempo à minha especialidade do que administrando o salão.
                         </label>
                     </li>
                     <li>
                         <label class="checkbox">
-                            <input type="checkbox" name="e" />
+                            <input type="checkbox" value="A6" name="a[]" />
                             Clientes que agendam horário e não chegam.
                         </label>
                     </li>
                     <li>
                         <label class="checkbox">
-                            <input type="checkbox" name="e" />
+                            <input type="checkbox" value="A7" name="a[]" />
                             Outro. Qual? <input type="text">
                         </label>
+                        <ul class="erro-manual">
+                            <li>É preciso marcar pelo menos uma opção.</li>
+                        </ul>
                     </li>
                   </ul>
 
                   <!-- Questão 2 -->
                   <ul id="q2" class="questao">
                     <li class="descricao">
-                      <h4><span>2. </span>Você está satisfeito com a quantidade de clientes que atende no seu salão?</4>
+                        <h4><span>2. </span>Você está satisfeito com a quantidade de clientes que atende no seu salão?</h4>
                     </li>
                     <li>
                         <label class="radio">
-                            <input type="radio" name="b" required />
+                            <input type="radio" value="B1" name="b" />
                             Sim, todos horários cheios.
                         </label>
                     </li>
                     <li>
                         <label class="radio">
-                            <input type="radio" name="b" />
+                            <input type="radio" value="B2" name="b" />
                             Sim, mas gostaria de ter mais clientes.
                         </label>
                     </li>
                     <li>
                         <label class="radio">
-                            <input type="radio" name="b" />
+                            <input type="radio" value="B3" name="b" />
                             Não.
                         </label>
+                        <ul class="erro-manual">
+                            <li>É preciso marcar pelo menos uma opção.</li>
+                        </ul>
                     </li>
                 </ul>
 
@@ -121,7 +127,7 @@
                       <h4><span>3. </span>Quantos funcionários você possui em seu salão?</h4>
                     </li>
                     <li>
-                        <input type="number" min="0" name="c" required />
+                        <input type="number" min="0" value="C1" name="c" required />
                     </li>
                 </ul>
 
@@ -131,7 +137,7 @@
                         <h4><span>4. </span>Destes, quantos são dedicados à serviços administrativos (como atender telefone, agendar horários, cuidar de pagamentos)?</h4>
                     </li>
                     <li>
-                        <input type="number" min="0" name="d" required />
+                        <input type="number" min="0" value="D1" name="d" required />
                     </li>
                 </ul>
 
@@ -142,48 +148,51 @@
                   </li>
                   <li>
                       <label class="checkbox">
-                          <input type="checkbox" name="e" data-parsley-mincheck="1" />Tenho smartphone
+                          <input type="checkbox" value="E1" name="e[]" />Tenho smartphone
                       </label>
                   </li>
                   <li>
                       <label class="checkbox">
-                          <input type="checkbox" name="e" />Tenho um computador
+                          <input type="checkbox" value="E2" name="e[]" />Tenho um computador
                       </label>
                   </li>
                   <li>
                       <label class="checkbox">
-                          <input type="checkbox" name="e" />Navego sempre na Internet
+                          <input type="checkbox" value="E3" name="e[]" />Navego sempre na Internet
                       </label>
                   </li>
                   <li>
                       <label class="checkbox">
-                          <input type="checkbox" name="e" />Já fiz compras pela internet
+                          <input type="checkbox" value="E4" name="e[]" />Já fiz compras pela internet
                       </label>
                   </li>
                   <li>
                       <label class="checkbox">
-                          <input type="checkbox" name="e" />Tenho um software de gestão no meu salão
+                          <input type="checkbox" value="E5" name="e[]" />Tenho um software de gestão no meu salão
                       </label>
                   </li>
                   <li>
                       <label class="checkbox">
-                          <input type="checkbox" name="e" />Tenho um site para meu salão
+                          <input type="checkbox" value="E6" name="e[]" />Tenho um site para meu salão
                       </label>
                   </li>
                   <li>
                       <label class="checkbox">
-                          <input type="checkbox" name="e" />Meu salão está presente nas redes sociais
+                          <input type="checkbox" value="E7" name="e[]" />Meu salão está presente nas redes sociais
                       </label>
                   </li>
                   <li>
                       <label class="checkbox">
-                          <input type="checkbox" name="e" />Utilizo programas para facilitar minhas finanças e compromissos pessoais
+                          <input type="checkbox" value="E8" name="e[]" />Utilizo programas para facilitar minhas finanças e compromissos pessoais
                       </label>
                   </li>
                   <li>
-                      <label class="checkbox">
-                          <input type="checkbox" name="e" />Não tenho  familiaridade com computador e/ou Internet
-                      </label>
+                        <label class="checkbox">
+                            <input type="checkbox" value="E9" name="e[]" />Não tenho  familiaridade com computador e/ou Internet
+                        </label>
+                        <ul class="erro-manual">
+                            <li>É preciso marcar pelo menos uma opção.</li>
+                        </ul>
                   </li>
               </ul>
 
@@ -193,7 +202,7 @@
                 <div class="control-group">
                     <label class="control-label" for="inputNome">Nome</label>
                     <div class="controls">
-                        <input type="text" id="inputNome" required>
+                        <input type="text" id="inputNome" name="nome" required>
                     </div>
                 </div>
 
@@ -201,7 +210,7 @@
                 <div class="control-group">
                     <label class="control-label" for="inputEmail">E-mail</label>
                     <div class="controls">
-                        <input type="email" id="inputEmail" data-parsley-trigger="change" required>
+                        <input type="email" id="inputEmail" name="email" data-parsley-trigger="change" required>
                     </div>
                 </div>
 
@@ -209,7 +218,7 @@
                 <div class="control-group">
                     <label class="control-label" for="inputTelefone">Telefone</label>
                     <div class="controls">
-                        <input type="text" id="inputTelefone" required>
+                        <input type="text" id="inputTelefone" name="telefone" required>
                     </div>
                 </div>
             </div>

@@ -33,14 +33,27 @@ class Relatorios extends CI_Controller {
     }
 
     public function gerarRelatorio() {
-
-        exit('feffregr');
-
-        $json = json_decode($_POST['data']);
+        $this->model('relatorio');
+        $this->model('usuario');
+        
+        
+        $questaoA = $_POST["a"];  // array 
+        $questaoB = $_POST["b"];
+        $questaoC = $_POST["c"];
+        $questaoD = $_POST["d"];
+        $questaoE = $_POST["e"];  // array
+        $nome = $_POST["nome"];
+        $email = $_POST["email"];
+        $telefone = $_POST["telefone"];
+        
+        
+        
+        
         $dados = array();
         $sucesso = true;
+        
+        
 
-        //$this->load->view("administracao/financeiro/comanda/".$json->view, $dados);
 
     }
 
