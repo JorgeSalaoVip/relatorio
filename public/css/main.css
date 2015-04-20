@@ -1,1 +1,192 @@
-@font-face{font-family:"Champagne";src:url("font/Champagne_Limousines.eot?") format("eot"),url("font/Champagne_Limousines.woff") format("woff"),url("font/Champagne_Limousines.ttf") format("truetype"),url("font/Champagne_Limousines.svg#Champagne&Limousines") format("svg");font-weight:normal;font-style:normal}.modal-header{padding:9px 15px;border-bottom:1px solid #eee;background:#08b5b3;color:#fff;border-top-left-radius:5px;border-top-right-radius:5px}.fl{float:left}.fr{float:right}#boxLoadUtilShadow{position:fixed;width:100%;height:100%;left:0;top:0;opacity:.8!important;filter:alpha(opacity=80)!important;z-index:1041;background-color:#000}#boxLoadUtil{position:fixed;width:100%;height:100%;left:0;top:0;z-index:1050;text-align:center}#loadUtilCarregando{width:100%;max-width:1000px;padding-top:20%;margin:6px auto;text-align:center;color:#fff}#mainContent{margin-top:30px;margin-bottom:40px}#resumoAssinatura{font-size:1.20em;box-sizing:border-box;background-color:#f3f3f3;padding:10px;-webkit-border-radius:0 0 8px 8px;border-radius:0 0 8px 8px}#resumoAssinatura h5{font-weight:bold}#resumoAssinatura hr{color:limegreen;border:3px solid #fff;-webkit-border-radius:5px 5px 5px 5px;border-radius:5px 5px 5px 5px;margin-top:12px;margin-bottom:12px}@media(min-width:1200px){#resumoAssinatura .row{margin-left:-14px!important}}#informacoesPagamento{font-size:1.2em}#cvv{width:80px!important}#dataValidade,#dataNasc{width:100px!important}#telefone,#cpf{width:160px!important}#dataValidadeGroup #mesValidade{width:60px}#dataValidadeGroup #anoValidade{width:80px}#boxLoadUtilShadow{position:fixed;width:100%;height:100%;left:0;top:0;opacity:.8!important;filter:alpha(opacity=80)!important;z-index:1500;background-color:#000}#boxLoadUtil{position:fixed;width:100%;height:100%;left:0;top:0;z-index:1501;text-align:center}#loadUtilCarregando{width:100%;max-width:1000px;padding-top:20%;margin:6px auto;text-align:center;font-size:14px;color:#fff}#acessoNegado{margin:0 auto;width:100%;height:100%;max-width:2000px;max-height:1000px}#acessoNegado a{float:left}#acessoNegado img{float:left;width:100%;height:100%;max-width:2000px;max-height:1000px}[class*="span"]{margin:0}body{background:#fff;font:normal 1em/1.4em Arial,Helvetica,sans-serif;margin:0;padding:0;overflow-x:hidden}.btnSVIP{background:#08b5b3}.btnSVIP:hover{background:#07a095}.btnSVIP2{background:#e86b6f}.btnSVIP2:hover{background:#db5f63}.bigModal{width:900px!important;margin-left:-470px!important}.bigModal .modal-body{min-height:245px;overflow:auto}.container{margin:0 auto}.margin0{margin-left:0!important}.clear{clear:both;display:block}.golden-line{background:#fff;text-align:center;margin-left:0!important;padding:10px 0}.golden-line img{width:100%}.line-shadow{width:100%;height:130px;margin-top:-50px;background:url(../img/bgShadow.png) center top no-repeat}.line{width:100%;float:left;border-bottom:1px solid #ddd;padding:10px 0}.border-sides{border-left:1px solid #ddd;border-right:1px solid #ddd}h2.titulo,h2.titulo2,h2.titulo3{color:#ba8e17;width:245px;text-align:center;background:url(../img/bgTitle.png) no-repeat 0 5px;text-transform:uppercase;font:normal 22px Arial,Helvetica,sans-serif;margin-left:40px;float:left}h2.titulo2,h2.titulo3{width:184px;background:url(../img/bgTitle2.png) no-repeat 0 5px}h2.titulo3{font-size:14px;padding-top:8px;margin-top:0}.green{color:#04b0a6}.red{color:#f9575d}.hidden{display:none!important}.font{font-family:"Raleway"!important;font-weight:lighter!important}.font.uppercase{text-transform:uppercase}.font strong{font-weight:bolder}.form label{margin:10px 10px 0 0;text-transform:uppercase;font-weight:bold;color:#999;text-align:left}.form label span{font-size:10px}.form label span.red{color:#f9575d;font-size:1em}.form input[type=text],.form input[type=date],.form input[type=email],.form input[type=phone],.form input[type=password],.form select,.form textarea{width:95%;padding:8px 5px;font-size:14px;font-weight:500;color:#777;display:block;-webkit-box-shadow:inset 0 0 10px #eee;-moz-box-shadow:inset 0 0 10px #eee;box-shadow:inset 0 0 10px #eee}.form select{height:39px;width:104%}.form .btn.green{color:#fff;margin-top:0}.form .btn.btn-primary{margin-right:-10px;margin-left:15px}.form .col-left{float:left;margin-left:12px;width:45%}.form .col-right{float:right;margin-right:12px;width:45%}.form .col-full{float:left;margin-left:12px;width:90%}.form .radio.inline{padding:0 0 8px 20px}.alert-icon-ok{margin-top:3px;background:url('../img/confirmation.png') no-repeat;width:30px;height:22px;display:block;float:left}.alert-icon-info{margin-top:3px;background:url('../img/information.png') no-repeat;width:30px;height:22px;display:block;float:left}.alert-icon-alert{margin-top:3px;background:url('../img/warning.png') no-repeat;width:30px;height:22px;display:block;float:left}.alert-icon-error{margin-top:3px;background:url('../img/error.png') no-repeat;width:30px;height:22px;display:block;float:left}.alert{text-align:left}.breadcrumb{font-size:12px;background-color:transparent;padding:0}#footer .titulo3{margin-left:15px}#footer .span3{height:150px;margin-left:0;padding-bottom:10px;border-left:1px solid #ccc;width:230px}#footer .span3.first{border:0;width:195px}#footer .span3.first a{padding:20px 20px 0;display:block}#footer ul{list-style:none;margin:0 15px 20px 15px}#footer ul li{font-size:13px;color:#555;width:180px}#footer ul .btn-cadastro:hover,#footer ul .btn-blog:hover{text-decoration:none;color:#fff}#footer ul .btn-cadastro{background-color:#0cc;color:#FFF;text-decoration:none;padding:7px 10px;position:relative;top:17px;font-size:13px;text-align:center}#footer ul .btn-cadastro a{text-align:center;text-decoration:none;color:#fff}#footer ul .btn-blog{background-color:#eb6e72;color:#FFF;text-decoration:none;padding:7px 10px;position:relative;top:17px;font-size:13px;text-align:center}#footer ul .btn-blog a{text-align:center;text-decoration:none;color:#fff}#footer a{color:#999;text-decoration:none}#footer a:hover{color:#0cc;text-decoration:underline}#footer iframe{margin-left:20px}#footer .social,#footer .copy{display:none;text-align:center}#footer #links-importantes>ul>li{float:left;margin:0 10px}#linksImportantes{background:#eee;padding:0 20px;padding-bottom:40px}#linksImportantes .bordaLateral{border-left:1px solid #ccc;padding-left:10px;margin-top:10px}#linksImportantes ul{list-style:none;padding-top:8px;margin:0}#linksImportantes ul li{font-size:14px;color:#333;list-style:none;padding:0;float:left;width:175px}#linksImportantes ul li a{font-size:12px;color:#666}#linksImportantes ul li a:hover{color:#096}#linksImportantes>ul>li{margin-top:20px;border-left:2px solid #eee;margin-left:15px;border-left-style:ridge}footer{box-sizing:border-box;width:100%;text-align:center;font-size:12px;padding:10px 0}footer a{color:#666}footer img{width:30px}footer ul{padding-left:50px}footer li{display:inline-block;border-right:1px solid #ccc;padding:0 20px}footer li:last-child{border:0}
+/* Geral */
+p {
+  font-size: 15px;
+  line-height: 20px;
+}
+h1 {
+  text-transform: uppercase;
+  font-size: 22px;
+  line-height: 28px;
+  font-weight: bold;
+}
+h4 {
+  font-weight: bold;
+  font-size: 18px;
+}
+
+@media screen and (max-width: 767px) {
+  p {font-size: 13px;}
+  h1 {font-size: 18px; line-height: 24px;}
+  h4 {font-size: 16px; line-height: 22px;}
+  label {font-size: 13px; line-height: 18px;}
+}
+
+/* Header */
+header {
+  background: #000;
+  height: 50px;
+  position: relative;
+}
+.logo {
+  padding-top: 5px;
+}
+.logo img {
+  max-height: 35px;
+  width: auto;
+  height: auto;
+  max-width: 100%;
+}
+
+@media screen and (max-width: 767px) {
+  header {
+    text-align: center;
+    height: 40px;
+  }
+  .logo img {
+    max-height: 30px;
+  }
+}
+
+/* Intro */
+.intro {
+  width: 100%;
+  background: url('../img/bg-salao-de-beleza.jpg') no-repeat;
+  background-size: cover;
+  position: relative;
+  height: auto;
+  display: table;
+}
+.intro .container {
+  text-align: center;
+  margin: 0 auto;
+}
+.intro h1,
+.intro p {
+  color: #fff;
+}
+.btn-comecar {
+  height: auto;
+  width: auto;
+  color: #cd9229;
+  border-radius: 5px;
+  border: 2px solid #cd9229;
+  font-size: 16px;
+  text-align: center;
+  margin-top: 30px;
+  background: none;
+  padding: 15px 25px;
+}
+.btn-comecar:hover,
+.btn-comecar:active {
+  color: #fff;
+  border: 2px solid #fff;
+}
+
+@media screen and (max-width: 767px) {
+  .intro .container {
+    padding: 30px 0 50px 0;
+    width: 96%;
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 991px) {
+  .intro .container {
+    padding: 40px 0 60px 0;
+    width: 90%;
+  }
+}
+@media screen and (min-width: 992px) {
+  .intro .container {
+    padding: 60px 0 80px 0;
+    width: 55%;
+  }
+}
+
+/* Questionário */
+.questionario {
+  padding: 50px 0;
+}
+.questionario ul {
+  border-bottom: 1px dashed #ccc;
+  padding: 15px 0 20px 0;
+  margin: 0;
+  margin-bottom: 0;
+}
+#q5 {
+  margin-bottom: 20px;
+}
+.questionario h4 span {
+  color: #cd9229;
+}
+.questionario ul li:first-child,
+#q3 li,
+#q4 li  {
+  padding: 4px 0;
+}
+.questionario li {
+  list-style: none;
+  padding: 4px 0 4px 20px;
+}
+.questionario label {
+  font-weight: normal;
+  font-size: 15px;
+  color: #333;
+}
+.questionario  .checkbox,
+.questionario  .radio {
+    margin-top: 0;
+    margin-bottom: 0;
+}
+.questionario  input[type="checkbox"] {
+  width: 15px;
+  height: 15px;
+  background: #fff;
+  border: 1px solid #999;
+  border-radius: 3px;
+}
+#formularioBasico {
+  margin: 30px 0;
+}
+.control-group {
+  margin-bottom: 20px;
+}
+.control-group label {
+  width: 80px;
+  float: left;
+}
+.btn-quero {
+  padding: 15px 20px;
+  border-radius: 5px;
+  font-size: 16px;
+  background: #cd9229;
+  color: #fff;
+  border: none;
+  text-align: center;
+  width: 500px;
+}
+.btn-quero:hover,
+.btn-quero:active {
+  background: #000;
+}
+
+/* Resposta */
+.resposta {
+  width: 100%;
+  background: #f9c568;
+  position: relative;
+}
+
+/* Footer */
+footer {
+  height: auto;
+  text-align: center;
+  background: #000;
+  padding: 5px 0;
+  color: #fff;
+}
+footer a {
+  color: #cd9229;
+}
+footer a:hover,
+footer a:active {
+  color: #fff;
+}
