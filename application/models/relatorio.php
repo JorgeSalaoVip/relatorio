@@ -15,7 +15,7 @@ class Relatorio extends CI_Model {
         {
             return false;
         } else {
-            return array(true, $id);
+            return $id;
         }
         
     }

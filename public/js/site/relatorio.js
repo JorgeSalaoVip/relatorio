@@ -54,13 +54,29 @@ function Relatorio() {
         });
     };
     
+    _self.abrirRespostas = function(questaoObj, respostasObj, letra) {
+        
+        respostasObj.each(function(index) {
+            if(questaoObj.find('input').eq(index-1).prop('checked')) {
+                $(this).find(letra + index).show();
+            }
+        });
+        
+    }
+    
+    _self.abrirRelatorio = function() {
+        var relatorioObj = $('.respostas');
+        
+        _self.abrirRespostas($('#q1'), relatorioObj.find('.respostasA1'), 'A');
+        
+    }
+    
     
     _self.gerarRelatorio = function() {
         loadUtils.abrir();
         
         var dados = $('#form').serialize();
         
-        //JSON.stringify(dados)
         $.ajax({
             type: "POST",
             data: dados,
@@ -68,10 +84,9 @@ function Relatorio() {
             url: base_url('relatorio/gerar'),
             success : function(dados){
                 loadUtils.remover();
-
                 //var obj = JSON.parse(json_str);
                 
-                alert('ABRIR');
+                _self.abrirRelatorio();
                 
             }
         });
