@@ -46,6 +46,7 @@ class Relatorios extends CI_Controller {
         $questaoC = $_POST["c"];
         $questaoD = $_POST["d"];
         $questaoE = $_POST["e"];  // array
+        $outros = $_POST["outros"];
             
         $usuario = array(
             "nome" => $nome,
@@ -56,11 +57,12 @@ class Relatorios extends CI_Controller {
         if($id = $this->usuario->gravar($usuario)) {
             $relatorio = array(
                 "user_id" => $id,
-                "QA" => $questaoA,
+                "QA" => implode(',', $questaoA),
                 "QB" => $questaoB,
                 "QC" => $questaoC,
                 "QD" => $questaoD,
-                "QE" => $questaoE
+                "QE" => implode(',', $questaoE),
+                "outro" => $outros
             );
             
             if($idrelatorio = $this->relatorio->gravar($relatorio)) {

@@ -1,23 +1,38 @@
 /* Geral */
 p {
-  font-size: 15px;
+  font-size: 16px;
   line-height: 20px;
+  font-family: 'Roboto Condensed', sans-serif;
+  font-weight: 300;
+  color: #000;
 }
 h1 {
   text-transform: uppercase;
-  font-size: 22px;
+  font-size: 20px;
   line-height: 28px;
-  font-weight: bold;
+  font-weight: 700;
+  font-family: 'Roboto Condensed', sans-serif;
 }
 h4 {
-  font-weight: bold;
-  font-size: 18px;
+  font-weight: 400;
+  font-size: 16px;
+  font-family: 'Roboto Condensed', sans-serif;
+  text-transform: uppercase;
+}
+li, label {
+  font-family: 'Roboto Condensed', sans-serif;
+  font-weight: 300;
+  font-size: 16px;
+  color: #000;
+}
+.text-center {
+  text-align: center !important;
 }
 
 @media screen and (max-width: 767px) {
   p {font-size: 13px;}
   h1 {font-size: 18px; line-height: 24px;}
-  h4 {font-size: 16px; line-height: 22px;}
+  h4 {font-size: 15px; line-height: 22px;}
   label {font-size: 13px; line-height: 18px;}
 }
 
@@ -75,6 +90,8 @@ header {
   margin-top: 30px;
   background: none;
   padding: 15px 25px;
+  font-family: 'Roboto Condensed', sans-serif;
+  font-weight: 400;
 }
 .btn-comecar:hover,
 .btn-comecar:active {
@@ -94,7 +111,13 @@ header {
     width: 90%;
   }
 }
-@media screen and (min-width: 992px) {
+@media screen and (min-width: 992px) and (max-width: 1199px) {
+  .intro .container {
+    padding: 50px 0 70px 0;
+    width: 70%;
+  }
+}
+@media screen and (min-width: 1200px) {
   .intro .container {
     padding: 60px 0 80px 0;
     width: 55%;
@@ -104,6 +127,11 @@ header {
 /* Questionário */
 .questionario {
   padding: 50px 0;
+  background: #f0f0f0;
+}
+.questionario .container {
+  padding: 10px 30px 30px 30px;
+  background: transparent;
 }
 .questionario ul.questao {
   border-bottom: 1px dashed #ccc;
@@ -113,6 +141,9 @@ header {
 }
 #q5 {
   margin-bottom: 20px;
+}
+.questionario h4 {
+  line-height: 24px;
 }
 .questionario h4 span {
   color: #cd9229;
@@ -165,16 +196,39 @@ header {
 .btn-quero {
   padding: 15px 20px;
   border-radius: 5px;
-  font-size: 16px;
+  font-size: 15px;
+  text-transform: uppercase;
+  font-weight: 400;
   background: #cd9229;
   color: #fff;
   border: none;
   text-align: center;
-  width: 500px;
+  width: 100%;
+  border: 2px solid #fff;
 }
 .btn-quero:hover,
 .btn-quero:active {
   background: #000;
+}
+@media screen and (max-width: 767px){
+  .questionario {
+    padding: 30px 0;
+  }
+  .questionario .container {
+    padding: 10px 20px 20px 20px;
+    width: 94%;
+  }
+}
+
+@media screen and (min-width: 992px) and (max-width: 1199px) {
+  .questionario .container {
+    width: 80%;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .questionario .container {
+    width: 60%;
+  }
 }
 
 /* Resposta */
@@ -182,7 +236,106 @@ header {
   width: 100%;
   background: #f9c568;
   position: relative;
+  padding: 40px 0;
+  margin: 0 auto;
 }
+.resposta .container {
+  width: 100%;
+  margin-right: auto;
+  margin-left: auto;
+}
+.resposta .container .row {
+    display: none;
+}
+.resposta p{
+  font-size: 15px;
+  margin: 25px 0;
+  line-height: 20px;
+}
+.resposta img {
+  max-width: 100%;
+  height: auto;
+}
+.resposta1,
+.resposta2,
+.resposta3,
+.resposta4,
+.resposta5 {
+  background: #fff;
+  margin-bottom:20px;
+  border: 1px dashed #cd9229;
+  padding: 10px 30px 5px 30px;
+}
+.resposta1 h4,
+.resposta2 h4,
+.resposta3 h4,
+.resposta4 h4,
+.resposta5 h4 {
+  color: #cd9229;
+}
+@media screen and (max-width: 767px) {
+  .resposta,
+  .cadastro .container {
+    width: 94%;
+  }
+  .cadastro {
+    padding: 25px 0;
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 991px){
+  .resposta,
+  .cadastro .container {
+    width: 86%;
+  }
+}
+@media screen and (min-width: 992px) and (max-width: 1199px){
+  .resposta,
+  .cadastro .container {
+    width: 80%;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .resposta,
+  .cadastro .container {
+    width: 70%;
+  }
+}
+
+/* Cadastro */
+.cadastro {
+  padding: 50px 0;
+  background: #cd9229;
+}
+.cadastro .container {
+  margin-right: auto;
+  margin-left: auto;
+}
+.cadastro button {
+  background: none;
+  border: 2px solid #fff;
+  padding: 15px 40px;
+  font-size: 15px;
+  font-weight: 400;
+  text-transform: uppercase;
+  color: #fff;
+  border-radius: 5px;
+}
+.cadastro button:hover,
+.cadastro button:active {
+    background: #000;
+}
+.cadastro a {
+  text-decoration: none;
+  color: #865705;
+  font-weight: 700;
+  border-bottom: 1px dashed #865705;
+}
+.cadastro img {
+  width: auto;
+  max-height:400px;
+  max-width: 100%;
+}
+
 
 /* Footer */
 footer {

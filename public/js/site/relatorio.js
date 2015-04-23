@@ -54,22 +54,25 @@ function Relatorio() {
         });
     };
     
-    _self.abrirRespostas = function(questaoObj, respostasObj, letra) {
-        
-        respostasObj.each(function(index) {
-            if(questaoObj.find('input').eq(index-1).prop('checked')) {
-                $(this).find(letra + index).show();
+    _self.abrirRespostas = function(questaoObj, respostasObj) {
+        console.log(questaoObj.find('input'));
+        questaoObj.find('input').each(function(index) {
+            var auxContador = index + 1;
+            if($(this).prop('checked')) {
+                respostasObj.find('.op' + auxContador).show();
             }
         });
         
     }
     
     _self.abrirRelatorio = function() {
-        var relatorioObj = $('.respostas');
+        var relatorioObj = $('.resposta');
         
-        _self.abrirRespostas($('#q1'), relatorioObj.find('.respostasA1'), 'A');
+        // dar display block no content respostas
+        _self.abrirRespostas($('#q1'), relatorioObj.find('.container.resposta1'));
+        _self.abrirRespostas($('#q2'), relatorioObj.find('.container.resposta2'));
         
-    }
+    };
     
     
     _self.gerarRelatorio = function() {
@@ -85,7 +88,7 @@ function Relatorio() {
             success : function(dados){
                 loadUtils.remover();
                 //var obj = JSON.parse(json_str);
-                
+                console.log('ok');
                 _self.abrirRelatorio();
                 
             }
