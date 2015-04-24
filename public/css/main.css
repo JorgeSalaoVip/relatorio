@@ -232,6 +232,9 @@ header {
 }
 
 /* Resposta */
+#respostasBloco {
+    display: none;
+}
 .resposta {
   width: 100%;
   background: #f9c568;

@@ -32,7 +32,7 @@
       <div class="container">
         <h1>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla iaculis lectus ac vehicula convallis. Nam at lectus.</h1>
         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse ex tortor, gravida et arcu vel, dapibus tincidunt leo. Aenean et nisl et est porta rhoncus. Nunc vel neque blandit, malesuada.</p>
-        <button class="btn-comecar">Comece a responder</button>
+        <button class="btn-comecar" id="btnComecar">Comece a responder</button>
       </div>
     </div>
 
@@ -231,7 +231,7 @@
     
     </form>
     
-    <div class="resposta">
+    <div class="resposta" id="respostasBloco">
       <div class="container">
         <h1>Resultado</h1>
         <img src="<?php echo base_url('public/img/bg-salao-de-beleza-2.jpg')?>">

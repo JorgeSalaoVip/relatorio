@@ -54,6 +54,13 @@ function Relatorio() {
         });
     };
     
+    _self.rolarPagina = function(scrollTopNum, callback) {
+        callback = typeof(callback) != 'undefined' ? callback : function() {};
+        $("html, body").animate({scrollTop:scrollTopNum}, '500', 'swing', function() { 
+            callback();
+        });
+    };
+    
     _self.abrirRespostas = function(questaoObj, respostasObj) {
         questaoObj.find('input').each(function(index) {
             var auxContador = index + 1;
@@ -66,6 +73,7 @@ function Relatorio() {
     _self.abrirRespostasCondicionais = function(questaoObj, respostasObj, arrQuestoesDesejadas, respostaDesejada, qtdObjetivo) {
         qtdObjetivo = typeof(qtdObjetivo) != 'undefined' ? qtdObjetivo : 0;
         var questoesChecadas = 0;
+        var retorno = false;
         
         questaoObj.find('input:checked').each(function(index) {
             var auxContador = index + 1;
@@ -76,7 +84,7 @@ function Relatorio() {
                 for (var i in arrQuestoesDesejadas) {
                     if(auxValor == arrQuestoesDesejadas[i]) {
                         respostasObj.find(respostaDesejada).show();
-                        return true;
+                        retorno = true;
                     }
                 }
                 
@@ -84,12 +92,14 @@ function Relatorio() {
                 if($(this).prop('checked')) {
                     questoesChecadas++;
                 }
-                if(questoesChecadas >= qtdObjetivo) {
+                if(questoesChecadas > qtdObjetivo) {
                     respostasObj.find(respostaDesejada).show();
-                    return true;
+                    retorno = true;
                 }
             }
-        });        
+        });   
+        
+        return retorno;
     };
     
     
@@ -112,6 +122,7 @@ function Relatorio() {
             respostasObj.find(respostaDesejada).show();
             return retorno;
         }
+        
         return retorno;
     };
     
@@ -125,7 +136,9 @@ function Relatorio() {
     };
     
     _self.abrirRelatorio = function() {
-        var relatorioObj = $('.resposta');
+        $('#respostasBloco.resposta').show();
+        var relatorioObj = $('#respostasBloco.resposta');
+        _self.rolarPagina($('#respostasBloco.resposta').position().top);
         
         // dar display block no content respostas
         _self.abrirRespostas($('#q1'), relatorioObj.find('.container.resposta1'));
@@ -155,10 +168,13 @@ function Relatorio() {
             
         });
         
-        _self.abrirRespostasCondicionais($('#q5'), relatorioObj.find('.container.resposta5'), [], '.op3', 3);
-        _self.abrirRespostasCondicionaisAND($('#q5'), relatorioObj.find('.container.resposta5'), ['E1','E2'], '.op1');
-        _self.abrirRespostasCondicionais($('#q5'), relatorioObj.find('.container.resposta5'), ['E1','E2','E9'], '.op1');
-        _self.abrirRespostasCondicionais($('#q5'), relatorioObj.find('.container.resposta5'), ['E3','E4','E5','E6','E7','E8'], '.op2');
+        if(!_self.abrirRespostasCondicionais($('#q5'), relatorioObj.find('.container.resposta5'), [], '.op3', 3)) {
+            if(!_self.abrirRespostasCondicionais($('#q5'), relatorioObj.find('.container.resposta5'), ['E3','E4','E5','E6','E7','E8'], '.op2')) {
+                _self.abrirRespostasCondicionaisAND($('#q5'), relatorioObj.find('.container.resposta5'), ['E1','E2'], '.op1');
+                _self.abrirRespostasCondicionais($('#q5'), relatorioObj.find('.container.resposta5'), ['E1','E2','E9'], '.op1');
+            }
+        }
+        
     };
     
     
@@ -174,10 +190,7 @@ function Relatorio() {
             url: base_url('relatorio/gerar'),
             success : function(dados){
                 loadUtils.remover();
-                //var obj = JSON.parse(json_str);
-                console.log('ok');
                 _self.abrirRelatorio();
-                
             }
         });
     };
@@ -189,6 +202,9 @@ function Relatorio() {
         
         _self.configurarEnvio('#form', '#submitBt');
         
+        $('#btnComecar').click(function() {
+            _self.rolarPagina($('#form').position().top);
+        });
         
     };
     
