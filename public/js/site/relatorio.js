@@ -55,15 +55,74 @@ function Relatorio() {
     };
     
     _self.abrirRespostas = function(questaoObj, respostasObj) {
-        console.log(questaoObj.find('input'));
         questaoObj.find('input').each(function(index) {
             var auxContador = index + 1;
             if($(this).prop('checked')) {
                 respostasObj.find('.op' + auxContador).show();
             }
-        });
+        });        
+    };
+    
+    _self.abrirRespostasCondicionais = function(questaoObj, respostasObj, arrQuestoesDesejadas, respostaDesejada, qtdObjetivo) {
+        qtdObjetivo = typeof(qtdObjetivo) != 'undefined' ? qtdObjetivo : 0;
+        var questoesChecadas = 0;
         
-    }
+        questaoObj.find('input:checked').each(function(index) {
+            var auxContador = index + 1;
+            var auxValor = $(this).val();
+            
+            if(qtdObjetivo == 0) {
+
+                for (var i in arrQuestoesDesejadas) {
+                    if(auxValor == arrQuestoesDesejadas[i]) {
+                        respostasObj.find(respostaDesejada).show();
+                        return true;
+                    }
+                }
+                
+            } else {
+                if($(this).prop('checked')) {
+                    questoesChecadas++;
+                }
+                if(questoesChecadas >= qtdObjetivo) {
+                    respostasObj.find(respostaDesejada).show();
+                    return true;
+                }
+            }
+        });        
+    };
+    
+    
+    _self.abrirRespostasCondicionaisAND = function(questaoObj, respostasObj, arrQuestoesDesejadas, respostaDesejada, qtdObjetivo) {
+        qtdObjetivo = typeof(qtdObjetivo) != 'undefined' ? qtdObjetivo : 0;
+        var retorno = true;
+        
+        questaoObj.find('input:checked').each(function(index) {
+            var auxValor = $(this).val();
+            
+            for (var i in arrQuestoesDesejadas) {
+                if(auxValor != arrQuestoesDesejadas[i]) {
+                    retorno = false;
+                }
+            }
+                
+        });        
+        
+        if(retorno) {
+            respostasObj.find(respostaDesejada).show();
+            return retorno;
+        }
+        return retorno;
+    };
+    
+    _self.abrirRespostasCondicionaisPorValor = function(questaoObj, respostasObj, callback) {
+        questaoObj.find('input').each(function(index) {
+            var auxValor = $(this).val();
+                
+            callback(respostasObj, auxValor);
+            
+        });
+    };
     
     _self.abrirRelatorio = function() {
         var relatorioObj = $('.resposta');
@@ -72,6 +131,34 @@ function Relatorio() {
         _self.abrirRespostas($('#q1'), relatorioObj.find('.container.resposta1'));
         _self.abrirRespostas($('#q2'), relatorioObj.find('.container.resposta2'));
         
+        _self.abrirRespostasCondicionaisPorValor($('#q3'), relatorioObj.find('.container.resposta3'), function(respostasObj, auxValor) {
+            
+            if(auxValor <= 10) {
+                respostasObj.find('.op1').show();
+            } else if (auxValor >= 11 && auxValor <= 20) {
+                respostasObj.find('.op2').show();
+            } else if (auxValor >= 21 && auxValor <= 40) {
+                respostasObj.find('.op3').show();
+            } else if (auxValor >= 41) {
+                respostasObj.find('.op4').show();
+            }
+            
+        });
+        
+        _self.abrirRespostasCondicionaisPorValor($('#q4'), relatorioObj.find('.container.resposta4'), function(respostasObj, auxValor) {
+            
+            if(auxValor <= 5) {
+                respostasObj.find('.op1').show();
+            } else if (auxValor >= 6) {
+                respostasObj.find('.op2').show();
+            } 
+            
+        });
+        
+        _self.abrirRespostasCondicionais($('#q5'), relatorioObj.find('.container.resposta5'), [], '.op3', 3);
+        _self.abrirRespostasCondicionaisAND($('#q5'), relatorioObj.find('.container.resposta5'), ['E1','E2'], '.op1');
+        _self.abrirRespostasCondicionais($('#q5'), relatorioObj.find('.container.resposta5'), ['E1','E2','E9'], '.op1');
+        _self.abrirRespostasCondicionais($('#q5'), relatorioObj.find('.container.resposta5'), ['E3','E4','E5','E6','E7','E8'], '.op2');
     };
     
     
